@@ -6,8 +6,8 @@ For use nodemon with powershell, put with strategic editor of windows 'activate 
 
 ## Run frontend
 
-For run frontend environment you must use terminal with command : npm run start
+For run frontend environment you must use terminal with command : `npm run start`
 
 ## Run server
 
-For run server you must use terminal command : node server or nodemon (watch)
+For run server you must use terminal command : `node server or nodemon (watch)`
