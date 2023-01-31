@@ -4,6 +4,10 @@
 
 For use nodemon with powershell, put with strategic editor of windows 'activate running script' on 'Active'
 
+## TIPS MONGOOSE
+
+Username and password are hide, delete in app.js import module and remplace 'connection' by your connection string
+
 ## Run frontend
 
 For run frontend environment you must use terminal with command : `npm run start`
@@ -11,3 +15,7 @@ For run frontend environment you must use terminal with command : `npm run start
 ## Run server
 
 For run server you must use terminal command : `node server or nodemon (watch)`
+
+## Install Mongoose
+
+`npm install mongoose`
