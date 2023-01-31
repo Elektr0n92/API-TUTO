@@ -1,7 +1,14 @@
 const express = require("express"); //Importe express
 const app = express(); // Cela crée une application EXPRESS
-
 app.use(express.json()); // Permet d'extraire le corp JSON de la requête
+const mongoose = require("mongoose"); // Importe Mongoose
+const { connection, hello } = require("./mongoose");
+console.log(hello);
+mongoose
+  .set("strictQuery", true)
+  .connect(connection, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Connexion à MongoDB réussie !"))
+  .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 // CORS : permet l'utilisation de l'api sur deux serveurs (ports) différents (port 3000 et 4200)
 app.use((req, res, next) => {

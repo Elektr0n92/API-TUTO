@@ -1,5 +1,5 @@
 const http = require("http"); // require permet d'importer modules NODE
-const app = require("./app"); // Appel le fichier app.js (pas besoin d'ajouter .js avec require)
+const app = require("./app");
 
 // La fonction normalizePort renvoie un port valide, qu'il soit fourni sous la forme d'un numéro ou d'une chaîne ;
 const normalizePort = (val) => {
