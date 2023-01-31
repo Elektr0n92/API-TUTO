@@ -1,2 +1,3 @@
 # Cela permet d'ingorer les fichiers/dossiers suivants : 
 node_modules
+mongoose.js
