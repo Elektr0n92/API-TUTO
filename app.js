@@ -5,7 +5,7 @@ const mongoose = require("mongoose"); // Importe Mongoose
 const { connection, hello } = require("./mongoose");
 console.log(hello);
 mongoose
-  .set("strictQuery", true)
+  .set("strictQuery", true) // permet d'éviter l'erreur de dépréciation
   .connect(connection, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
