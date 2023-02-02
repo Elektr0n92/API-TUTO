@@ -3,6 +3,7 @@ const app = express(); // Cela crée une application EXPRESS
 const mongoose = require("mongoose"); // Importe Mongoose
 const { connection, hello } = require("./mongoose");
 const stuffRoutes = require("./routes/stuff");
+const userRoutes = require("./routes/user");
 console.log(hello);
 mongoose
   .set("strictQuery", true) // permet d'éviter l'erreur de dépréciation
@@ -29,6 +30,7 @@ app.use(express.json()); // Permet d'extraire le corp JSON de la requête
 // Les Requêtes se trouvent dans le dossier 'routes'
 
 app.use("/api/stuff", stuffRoutes); // route de base
+app.use("/api/auth", userRoutes);
 
 app.use((req, res, next) => {
   // Ceci représente un middleware la fonction next permet de renvoyer vers un autre middleware
