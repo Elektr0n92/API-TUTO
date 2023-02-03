@@ -6,7 +6,7 @@ const stuffCtrl = require("../controllers/stuff");
 // route de base d'enregistrement du routeur donc '/'
 
 router.post("/", auth, stuffCtrl.createThing);
-router.get("/", auth, stuffCtrl.getAllThings);
+router.get("/", stuffCtrl.getAllThings);
 router.get("/:id", auth, stuffCtrl.getOneThing);
 router.put("/:id", auth, stuffCtrl.modifyThing);
 router.delete("/:id", auth, stuffCtrl.deleteThing);
