@@ -1,13 +1,14 @@
 //LOGIQUE Routing
 const express = require("express");
 const router = express.Router();
+const auth = require("../middleware/auth");
 const stuffCtrl = require("../controllers/stuff");
 // route de base d'enregistrement du routeur donc '/'
 
-router.post("/", stuffCtrl.createThing);
+router.post("/", auth, stuffCtrl.createThing);
 router.get("/", stuffCtrl.getAllThings);
-router.get("/:id", stuffCtrl.getOneThing);
-router.put("/:id", stuffCtrl.modifyThing);
-router.delete("/:id", stuffCtrl.deleteThing);
+router.get("/:id", auth, stuffCtrl.getOneThing);
+router.put("/:id", auth, stuffCtrl.modifyThing);
+router.delete("/:id", auth, stuffCtrl.deleteThing);
 
 module.exports = router;
